@@ -1,0 +1,20 @@
+.aside-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .aside-card {
+    height: 150px;
+    width: 263px;
+    color: white;
+    padding: 1%;
+  }
+  .aside-card-event {
+    background: #39bef6;
+  }
+  .aside-card-fav {
+    background: #45e493;
+  }
+  .aside-card-comment {
+    background: #ff445f;
+  }
+}

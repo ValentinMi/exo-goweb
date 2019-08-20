@@ -1,0 +1,57 @@
+// Progress bar box
+
+.bar-cont {
+  height: 200px;
+  width: 262px;
+  padding: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  .percent-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 132px;
+    .bar-percent {
+      font-size: 44px;
+    }
+
+    .trending-up-arrow {
+      height: 23px;
+    }
+  }
+
+  .bar {
+    background: rgba(0, 0, 0, 0.1);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 16px;
+    width: 200px;
+  }
+
+  .bar-value {
+    height: 16px;
+    width: 0;
+    border-radius: 100px;
+    background: linear-gradient(
+      to right,
+      #ff475f,
+      #ff714f,
+      #ff9846,
+      #ffbc4a,
+      #fedf5d
+    );
+  }
+}
+
+// Donut
+
+.donut-cont {
+  height: 275px;
+  width: 262px;
+}

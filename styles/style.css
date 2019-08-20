@@ -1,3 +1,55 @@
+.aside-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .aside-cont .aside-card {
+    height: 150px;
+    width: 263px;
+    color: white;
+    padding: 1%; }
+  .aside-cont .aside-card-event {
+    background: #39bef6; }
+  .aside-cont .aside-card-fav {
+    background: #45e493; }
+  .aside-cont .aside-card-comment {
+    background: #ff445f; }
+
+.bar-cont {
+  height: 200px;
+  width: 262px;
+  padding: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+  .bar-cont .percent-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 132px; }
+    .bar-cont .percent-cont .bar-percent {
+      font-size: 44px; }
+    .bar-cont .percent-cont .trending-up-arrow {
+      height: 23px; }
+  .bar-cont .bar {
+    background: rgba(0, 0, 0, 0.1);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 16px;
+    width: 200px; }
+  .bar-cont .bar-value {
+    height: 16px;
+    width: 0;
+    border-radius: 100px;
+    background: linear-gradient(to right, #ff475f, #ff714f, #ff9846, #ffbc4a, #fedf5d); }
+
+.donut-cont {
+  height: 275px;
+  width: 262px; }
+
 .navbar {
   padding: 0 5%;
   height: 125px;
@@ -9,5 +61,13 @@
   align-items: center;
   height: 125px;
   background: #f4f6f9; }
+
+.slideshow {
+  height: 499px;
+  width: 462px;
+  background: grey; }
+
+.main-content-cont .main-text-cont .text {
+  font-family: arial; }
 
 /*# sourceMappingURL=style.css.map */

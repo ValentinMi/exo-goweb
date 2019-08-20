@@ -2,6 +2,19 @@
 
 @import "aside.scss";
 @import "burger_menu.scss";
-@import "donut_&_slider.scss";
+@import "donut_&_bar.scss";
 @import "nav_&_footer.scss";
 @import "slideshow.scss";
+
+// Font
+$font: arial;
+
+// Main content
+
+.main-content-cont {
+  .main-text-cont {
+    .text {
+      font-family: $font;
+    }
+  }
+}
