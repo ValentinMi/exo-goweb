@@ -1,0 +1,17 @@
+$grey: #f4f6f9;
+
+//  Nav
+.navbar {
+  padding: 0 5%;
+  height: 125px;
+  background: $grey;
+}
+
+// Footer
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125px;
+  background: $grey;
+}
