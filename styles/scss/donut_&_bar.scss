@@ -1,3 +1,12 @@
+$gradient: linear-gradient(
+  to right,
+  #ff475f,
+  #ff714f,
+  #ff9846,
+  #ffbc4a,
+  #fedf5d
+);
+
 // Progress bar box
 
 .bar-cont {
@@ -24,6 +33,7 @@
   }
 
   .bar {
+    // Empty progress bar color
     background: rgba(0, 0, 0, 0.1);
     justify-content: flex-start;
     border-radius: 100px;
@@ -38,14 +48,8 @@
     height: 16px;
     width: 0;
     border-radius: 100px;
-    background: linear-gradient(
-      to right,
-      #ff475f,
-      #ff714f,
-      #ff9846,
-      #ffbc4a,
-      #fedf5d
-    );
+    // Progress bar color
+    background: $gradient;
   }
 }
 
@@ -54,4 +58,30 @@
 .donut-cont {
   height: 275px;
   width: 262px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .donut {
+    position: relative;
+    height: 171px;
+    width: 171px;
+    .svg-cont {
+      display: block;
+      margin: 0 auto;
+    }
+    .progress {
+      fill: none;
+      stroke: url(#lgrad);
+      stroke-width: 18;
+      stroke-linecap: round;
+      transform-origin: center;
+      transform: rotate(-90deg);
+    }
+    text {
+      font-family: arial;
+      fill: black;
+      font-size: 44px;
+    }
+  }
 }

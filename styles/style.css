@@ -48,7 +48,29 @@
 
 .donut-cont {
   height: 275px;
-  width: 262px; }
+  width: 262px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+  .donut-cont .donut {
+    position: relative;
+    height: 171px;
+    width: 171px; }
+    .donut-cont .donut .svg-cont {
+      display: block;
+      margin: 0 auto; }
+    .donut-cont .donut .progress {
+      fill: none;
+      stroke: url(#lgrad);
+      stroke-width: 18;
+      stroke-linecap: round;
+      transform-origin: center;
+      transform: rotate(-90deg); }
+    .donut-cont .donut text {
+      font-family: arial;
+      fill: black;
+      font-size: 44px; }
 
 .navbar {
   padding: 0 5%;
