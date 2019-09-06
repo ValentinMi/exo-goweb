@@ -2,4 +2,47 @@
   height: 499px;
   width: 462px;
   background: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  margin-left: 6%;
+  // mobile
+  @media (max-width: 767px) {
+    width: auto;
+    margin-left: 0;
+    margin-top: 8%;
+    padding: 5%;
+  }
+
+  .slide-quote {
+    font-size: 47px;
+    font-family: "Bitter", serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 35%;
+  }
+
+  .slide-btn-cont {
+    width: 99px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6%;
+
+    .btn-circle {
+      width: 30px;
+      height: 30px;
+      padding: 6px 0px;
+      border-radius: 15px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.42857;
+      background: #e6e2e0;
+      &:focus {
+        background: red;
+      }
+    }
+  }
 }

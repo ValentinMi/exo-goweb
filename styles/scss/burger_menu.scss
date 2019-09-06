@@ -1,0 +1,47 @@
+.hambmenu {
+  position: absolute;
+  right: 0;
+  width: 638px;
+  @media (max-width: 767px) {
+    width: 60%;
+  }
+  height: 100%;
+  padding: 3% 5%;
+  background: rgba(38, 38, 38, 0.9);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  display: none;
+
+  .close-btn-cont {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    .btn-hamb-close {
+      position: relative;
+      right: 0;
+      width: 23px;
+    }
+  }
+
+  .hamb-link-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20%;
+    .hamb-link {
+      font-size: 30px;
+      color: white;
+      position: relative;
+      left: 0;
+      font-family: "Bitter", serif;
+      font-weight: bold;
+      font-style: italic;
+      margin: 4% 0;
+    }
+    .hamb-sub-link {
+      color: grey;
+      margin: 4% 0;
+    }
+  }
+}

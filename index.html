@@ -8,155 +8,188 @@
     <link rel="stylesheet" href="./styles/bootstrap.min.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <script src="./progressAnim.js" defer></script>
+    <script src="./slideshow.js" defer></script>
+    <script src="./hambMenu.js" defer></script>
   </head>
   <body>
-    <!-- NavBar -->
-    <div class="row">
-      <div class="col-12">
-        <nav class="navbar">
-          <a class="navbar-brand" href="#">
-            <img class="nav-icon" src="./imgs/G..png" alt="G." />
-          </a>
-          <img class="nav-icon" src="./imgs/Burger.png" alt="Menu" />
-        </nav>
-      </div>
-    </div>
-    <!-- Main content  -->
-    <div class="container-fluid main-content-cont">
+    <div class="main-container">
+      <!-- NavBar -->
       <div class="row">
-        <!-- Aside  -->
-        <div class="col-12 col-md-4">
-          <div class="aside-cont">
-            <div class="aside-card aside-card-event">
-              <span
-                >Un événement <img src="./imgs/event icon.png" alt="Event"
-              /></span>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisic.</p>
-            </div>
-            <div class="aside-card aside-card-fav">
-              <span
-                >Un favori <img src="./imgs/favorite icon.png" alt="Event"
-              /></span>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisic.</p>
-            </div>
-            <div class="aside-card aside-card-comment">
-              <span
-                >Un message <img src="./imgs/comment icon.png" alt="Event"
-              /></span>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisic.</p>
+        <div class="col-12">
+          <nav class="navbar">
+            <a class="navbar-brand" href="#">
+              <img class="nav-icon" src="./imgs/G..png" alt="G." />
+            </a>
+            <img
+              class="nav-icon"
+              id="hambBtn"
+              src="./imgs/Burger.png"
+              alt="Menu"
+            />
+          </nav>
+        </div>
+      </div>
+      <!-- Hamb menu  -->
+      <div class="hambmenu" id="hambMenu">
+        <div class="close-btn-cont">
+          <img
+            src="./imgs/close_icon.png"
+            class="btn-hamb-close"
+            id="closeHambBtn"
+            alt="X"
+          />
+        </div>
+        <div class="hamb-link-cont">
+          <a href="#" class="hamb-link">One link</a>
+          <a href="#" class="hamb-sub-link">Link lorem 1</a>
+          <a href="#" class="hamb-sub-link">Link lorem 2</a>
+          <a href="#" class="hamb-link">Two links</a>
+          <a href="#" class="hamb-link">Three links</a>
+        </div>
+      </div>
+      <!-- Main content  -->
+      <div class="container-fluid main-content-cont">
+        <div class="row">
+          <!-- Aside  -->
+          <div class="col-12 col-md-3">
+            <div class="aside-cont">
+              <div class="aside-card aside-card-event">
+                <span
+                  >Un événement <img src="./imgs/event icon.png" alt="Event"
+                /></span>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisic.</p>
+              </div>
+              <div class="aside-card aside-card-fav">
+                <span
+                  >Un favori <img src="./imgs/favorite icon.png" alt="Event"
+                /></span>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisic.</p>
+              </div>
+              <div class="aside-card aside-card-comment">
+                <span
+                  >Un message <img src="./imgs/comment icon.png" alt="Event"
+                /></span>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisic.</p>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Text  -->
-        <div class="col-12 col-md-8">
-          <div class="container-fluid main-text-cont">
-            <div class="row">
-              <!-- Top text -->
-              <div class="col-12">
-                <div class="text text-top">
-                  <h2>Un petit titre</h2>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Aperiam quae dolor eveniet impedit? Atque accusamus
-                    inventore eos quia ab voluptatibus. Repudiandae quidem,
-                    neque accusantium delectus sequi voluptates repellendus est
-                    totam?
-                  </p>
-                </div>
-              </div>
-              <!-- Progress bar & donut -->
-              <div class="col-4">
-                <!-- Bar -->
-                <div class="bar-cont">
-                  <span>Une progress bar cute</span>
-                  <div class="percent-cont">
-                    <img
-                      class="trending-up-arrow"
-                      src="./imgs/trending_up icon.png"
-                      alt="trending-up arrow"
-                    />
-                    <span class="bar-percent" id="barPercent">0%</span>
-                  </div>
-                  <div class="bar">
-                    <div class="bar-value" id="barValue"></div>
+          <!-- Text  -->
+          <div class="col-12 col-md-9">
+            <div class="container-fluid main-text-cont">
+              <div class="row">
+                <!-- Top text -->
+                <div class="col-12 col-text">
+                  <div class="text text-top">
+                    <h2>Un petit titre</h2>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Aperiam quae dolor eveniet impedit? Atque accusamus
+                      inventore eos quia ab voluptatibus. Repudiandae quidem,
+                      neque accusantium delectus sequi voluptates repellendus
+                      est totam?
+                    </p>
                   </div>
                 </div>
-                <!-- Donut  -->
-                <div class="donut-cont">
-                  <span>Un donut méga cool</span>
-                  <div class="donut" id="donut">
-                    <svg class="svg-cont" width="171px" height="171px">
-                      <defs>
-                        <linearGradient
-                          id="lgrad"
-                          x1="100%"
-                          y1="51%"
-                          x2="0%"
-                          y2="49%"
-                        >
-                          <stop
-                            offset="0%"
-                            style="stop-color:#ff475f;stop-opacity:1"
+                <!-- Progress bar & donut -->
+                <div class="row">
+                  <div class="col-12 col-md-4">
+                    <div class="graph-cont">
+                      <!-- Bar -->
+                      <div class="bar-cont">
+                        <span>Une progress bar cute</span>
+                        <div class="percent-cont">
+                          <img
+                            class="trending-up-arrow"
+                            src="./imgs/trending_up icon.png"
+                            alt="trending-up arrow"
                           />
-                          <stop
-                            offset="100%"
-                            style="stop-color:#fedf5d;stop-opacity:1"
-                          />
-                        </linearGradient>
-                      </defs>
-                      <g id="">
-                        <circle
-                          class="progress"
-                          id="two"
-                          cx="50%"
-                          cy="50%"
-                          r="75px"
-                        />
-                        <text
-                          id="percent-two"
-                          text-anchor="middle"
-                          x="50%"
-                          y="58%"
-                        >
-                          0 %
-                        </text>
-                      </g>
-                    </svg>
+                          <span class="bar-percent" id="barPercent">0%</span>
+                        </div>
+                        <div class="bar">
+                          <div class="bar-value" id="barValue"></div>
+                        </div>
+                      </div>
+                      <!-- Donut  -->
+                      <div class="donut-cont">
+                        <span>Un donut méga cool</span>
+                        <div class="donut" id="donut">
+                          <svg class="svg-cont" width="171px" height="171px">
+                            <defs>
+                              <!-- Progress donut bar gradient  -->
+                              <linearGradient
+                                id="lgrad"
+                                x1="100%"
+                                y1="51%"
+                                x2="0%"
+                                y2="49%"
+                              >
+                                <stop
+                                  offset="0%"
+                                  style="stop-color:#ff475f;stop-opacity:1"
+                                />
+                                <stop
+                                  offset="100%"
+                                  style="stop-color:#fedf5d;stop-opacity:1"
+                                />
+                              </linearGradient>
+                            </defs>
+                            <g id="">
+                              <circle
+                                class="progress"
+                                id="circle"
+                                cx="50%"
+                                cy="50%"
+                                r="75px"
+                              />
+                              <text
+                                id="percent"
+                                text-anchor="middle"
+                                x="50%"
+                                y="58%"
+                              >
+                                0 %
+                              </text>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slideshow  -->
+                  <div class="col-12 col-md-8">
+                    <div class="slideshow" id="slideshow">
+                      <h1 class="slide-quote" id="slideQuote"></h1>
+                      <div class="slide-btn-cont" id="slideBtnCont"></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <!-- Slideshow  -->
-              <div class="col-8">
-                <div class="slideshow" id="slideshow">
-                  <span class="slideshow-quote">Test</span>
-                  <button class="slideshow-btn"></button>
-                  <button class="slideshow-btn"></button>
-                  <button class="slideshow-btn"></button>
-                </div>
-              </div>
-              <!-- Bottom text  -->
-              <div class="col-12">
-                <div class="text text-bottom">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Ipsam dolorem officiis quam doloremque impedit, accusantium
-                  nisi deserunt laudantium reprehenderit vel quod vero illum
-                  dignissimos tempore nobis soluta quibusdam voluptates
-                  sapiente. Lorem ipsum dolor sit, amet consectetur adipisicing
-                  elit. Reiciendis itaque eum veniam aperiam modi nihil
-                  exercitationem architecto id explicabo eligendi quidem, odit,
-                  illo, voluptates tenetur nemo accusamus impedit sit fuga.
+                <!-- Bottom text  -->
+                <div class="col-12 col-text">
+                  <div class="text text-bottom">
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Ipsam dolorem officiis quam doloremque impedit,
+                      accusantium nisi deserunt laudantium reprehenderit vel
+                      quod vero illum dignissimos tempore nobis soluta quibusdam
+                      voluptates sapiente. Lorem ipsum dolor sit, amet
+                      consectetur adipisicing elit. Reiciendis itaque eum veniam
+                      aperiam modi nihil exercitationem architecto id explicabo
+                      eligendi quidem, odit, illo, voluptates tenetur nemo
+                      accusamus impedit sit fuga.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Footer  -->
-    <div class="row">
-      <div class="col-12">
-        <div class="footer">
-          <img src="./imgs/goweb_logo_red.png" alt="Goweb." />
+      <!-- Footer  -->
+      <div class="row">
+        <div class="col-12">
+          <div class="footer">
+            <img src="./imgs/goweb_logo_red.png" alt="Goweb." />
+          </div>
         </div>
       </div>
     </div>

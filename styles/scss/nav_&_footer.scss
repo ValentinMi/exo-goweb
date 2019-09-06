@@ -2,9 +2,13 @@ $grey: #f4f6f9;
 
 //  Nav
 .navbar {
-  padding: 0 5%;
   height: 125px;
   background: $grey;
+  padding: 0 150px;
+  // mobile
+  @media (max-width: 767px) {
+    padding: 0 30px;
+  }
 }
 
 // Footer

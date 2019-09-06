@@ -6,15 +6,77 @@
 @import "nav_&_footer.scss";
 @import "slideshow.scss";
 
-// Font
-$font: arial;
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Bitter:400,700|Raleway:400,500,700,900&display=swap");
+
+// // Bitter
+// @font-face {
+//   font-family: "Bitter-bold";
+//   src: url("./fonts/Bitter/Bitter-Bold.ttf");
+// }
+
+// // Raleway
+// @font-face {
+//   font-family: "Raleway-black";
+//   src: url("./fonts/Raleway/Raleway-Black.ttf");
+// }
+
+// @font-face {
+//   font-family: "Raleway-bold";
+//   src: url("./fonts/Raleway/Raleway-Bold/.ttf");
+// }
+
+// @font-face {
+//   font-family: "Raleway-regular";
+//   src: url("./fonts/Raleway/Raleway-Regular.ttf");
+// }
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
 
 // Main content
 
 .main-content-cont {
+  background: #fcfcfc;
+  padding: 50px 150px;
+  @media (max-width: 767px) {
+    padding: 0 0 50px 0;
+  }
+  height: 100%;
+
   .main-text-cont {
-    .text {
-      font-family: $font;
+    padding-left: 8%;
+    .text-top {
+      margin-bottom: 3%;
     }
+    .text-bottom {
+      margin-top: 5%;
+    }
+    .text {
+      h2 {
+        font-family: "Raleway", sans-serif;
+        font-weight: 900;
+      }
+      p {
+        font-family: "Raleway", sans-serif;
+      }
+    }
+  }
+}
+
+// Mobile col padding remove
+
+@media (max-width: 767px) {
+  .col-12 {
+    padding: 0;
+  }
+  p,
+  h2 {
+    padding: 0 2%;
   }
 }

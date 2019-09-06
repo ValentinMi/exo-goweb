@@ -11,7 +11,7 @@ function progressBarAnim(percent, interval) {
   let percentNumber = document.getElementById("barPercent");
 
   var id = setInterval(progress, interval);
-  function progress() {
+  function progress() {1440
     // If bar progress to his percent goal
     if (width >= percent) {
       // Stop it
@@ -27,13 +27,14 @@ function progressBarAnim(percent, interval) {
 
 // Donut progress anim
 function progressDonutAnim(percent, interval) {
-  let circle = document.getElementById("two");
-  let text = document.getElementById("percent-two");
+  let circle = document.getElementById("circle");
+  let text = document.getElementById("percent");
   let angle = 0;
   percent = percent * 4.7;
 
   window.timer = window.setInterval(() => {
     circle.setAttribute("stroke-dasharray", angle + ", 20000");
+
     text.innerHTML = parseInt((angle / 471) * 100) + " %";
 
     if (angle >= percent) {

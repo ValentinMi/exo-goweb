@@ -1,12 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Bitter:400,700|Raleway:400,500,700,900&display=swap");
 .aside-cont {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  position: fixed; }
+  @media (max-width: 767px) {
+    .aside-cont {
+      position: unset;
+      margin-bottom: 3%; } }
   .aside-cont .aside-card {
     height: 150px;
     width: 263px;
     color: white;
-    padding: 1%; }
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    @media (max-width: 767px) {
+      .aside-cont .aside-card {
+        width: 100%; } }
+    .aside-cont .aside-card span {
+      font-weight: 900;
+      font-family: "Raleway", sans-serif;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 20px; }
+    .aside-cont .aside-card p {
+      font-family: "Raleway", sans-serif;
+      font-weight: 500; }
   .aside-cont .aside-card-event {
     background: #39bef6; }
   .aside-cont .aside-card-fav {
@@ -14,68 +36,129 @@
   .aside-cont .aside-card-comment {
     background: #ff445f; }
 
-.bar-cont {
-  height: 200px;
-  width: 262px;
-  padding: 8%;
+.hambmenu {
+  position: absolute;
+  right: 0;
+  width: 638px;
+  height: 100%;
+  padding: 3% 5%;
+  background: rgba(38, 38, 38, 0.9);
+  z-index: 999;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center; }
-  .bar-cont .percent-cont {
+  display: none; }
+  @media (max-width: 767px) {
+    .hambmenu {
+      width: 60%; } }
+  .hambmenu .close-btn-cont {
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 132px; }
-    .bar-cont .percent-cont .bar-percent {
-      font-size: 44px; }
-    .bar-cont .percent-cont .trending-up-arrow {
-      height: 23px; }
-  .bar-cont .bar {
-    background: rgba(0, 0, 0, 0.1);
-    justify-content: flex-start;
-    border-radius: 100px;
-    align-items: center;
-    position: relative;
+    justify-content: flex-end; }
+    .hambmenu .close-btn-cont .btn-hamb-close {
+      position: relative;
+      right: 0;
+      width: 23px; }
+  .hambmenu .hamb-link-cont {
     display: flex;
-    height: 16px;
-    width: 200px; }
-  .bar-cont .bar-value {
-    height: 16px;
-    width: 0;
-    border-radius: 100px;
-    background: linear-gradient(to right, #ff475f, #ff714f, #ff9846, #ffbc4a, #fedf5d); }
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20%; }
+    .hambmenu .hamb-link-cont .hamb-link {
+      font-size: 30px;
+      color: white;
+      position: relative;
+      left: 0;
+      font-family: "Bitter", serif;
+      font-weight: bold;
+      font-style: italic;
+      margin: 4% 0; }
+    .hambmenu .hamb-link-cont .hamb-sub-link {
+      color: grey;
+      margin: 4% 0; }
 
-.donut-cont {
-  height: 275px;
-  width: 262px;
+.graph-cont {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center; }
-  .donut-cont .donut {
-    position: relative;
-    height: 171px;
-    width: 171px; }
-    .donut-cont .donut .svg-cont {
-      display: block;
-      margin: 0 auto; }
-    .donut-cont .donut .progress {
-      fill: none;
-      stroke: url(#lgrad);
-      stroke-width: 18;
-      stroke-linecap: round;
-      transform-origin: center;
-      transform: rotate(-90deg); }
-    .donut-cont .donut text {
-      font-family: arial;
-      fill: black;
-      font-size: 44px; }
+  justify-content: space-between; }
+  @media (max-width: 767px) {
+    .graph-cont {
+      align-items: center; } }
+  .graph-cont .bar-cont {
+    height: 200px;
+    width: 262px;
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    -webkit-box-shadow: 0px 0px 11px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 11px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 11px -8px rgba(0, 0, 0, 0.75); }
+    .graph-cont .bar-cont .percent-cont {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 132px; }
+      .graph-cont .bar-cont .percent-cont .bar-percent {
+        font-size: 44px;
+        font-family: "Bitter", serif;
+        font-weight: bold; }
+      .graph-cont .bar-cont .percent-cont .trending-up-arrow {
+        height: 23px; }
+    .graph-cont .bar-cont .bar {
+      background: rgba(0, 0, 0, 0.1);
+      justify-content: flex-start;
+      border-radius: 100px;
+      align-items: center;
+      position: relative;
+      display: flex;
+      height: 16px;
+      width: 200px; }
+    .graph-cont .bar-cont .bar-value {
+      height: 16px;
+      width: 0;
+      border-radius: 100px;
+      background: linear-gradient(to right, #ff475f, #ff714f, #ff9846, #ffbc4a, #fedf5d); }
+  .graph-cont .donut-cont {
+    height: 275px;
+    width: 262px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    -webkit-box-shadow: 0px 0px 11px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 11px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 11px -8px rgba(0, 0, 0, 0.75); }
+    .graph-cont .donut-cont .donut {
+      position: relative;
+      height: 171px;
+      width: 171px; }
+      .graph-cont .donut-cont .donut .svg-cont {
+        display: block;
+        margin: 0 auto; }
+      .graph-cont .donut-cont .donut .progress {
+        fill: none;
+        stroke: url(#lgrad);
+        stroke-width: 18;
+        stroke-linecap: round;
+        transform-origin: center;
+        transform: rotate(-90deg); }
+      .graph-cont .donut-cont .donut text {
+        fill: black;
+        font-size: 44px;
+        font-family: "Bitter", serif;
+        font-weight: bold; }
 
 .navbar {
-  padding: 0 5%;
   height: 125px;
-  background: #f4f6f9; }
+  background: #f4f6f9;
+  padding: 0 150px; }
+  @media (max-width: 767px) {
+    .navbar {
+      padding: 0 30px; } }
 
 .footer {
   display: flex;
@@ -87,9 +170,75 @@
 .slideshow {
   height: 499px;
   width: 462px;
-  background: grey; }
+  background: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  margin-left: 6%; }
+  @media (max-width: 767px) {
+    .slideshow {
+      width: auto;
+      margin-left: 0;
+      margin-top: 8%;
+      padding: 5%; } }
+  .slideshow .slide-quote {
+    font-size: 47px;
+    font-family: "Bitter", serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 35%; }
+  .slideshow .slide-btn-cont {
+    width: 99px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6%; }
+    .slideshow .slide-btn-cont .btn-circle {
+      width: 30px;
+      height: 30px;
+      padding: 6px 0px;
+      border-radius: 15px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.42857;
+      background: #e6e2e0; }
+      .slideshow .slide-btn-cont .btn-circle:focus {
+        background: red; }
 
-.main-content-cont .main-text-cont .text {
-  font-family: arial; }
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden; }
+
+.main-content-cont {
+  background: #fcfcfc;
+  padding: 50px 150px;
+  height: 100%; }
+  @media (max-width: 767px) {
+    .main-content-cont {
+      padding: 0 0 50px 0; } }
+  .main-content-cont .main-text-cont {
+    padding-left: 8%; }
+    .main-content-cont .main-text-cont .text-top {
+      margin-bottom: 3%; }
+    .main-content-cont .main-text-cont .text-bottom {
+      margin-top: 5%; }
+    .main-content-cont .main-text-cont .text h2 {
+      font-family: "Raleway", sans-serif;
+      font-weight: 900; }
+    .main-content-cont .main-text-cont .text p {
+      font-family: "Raleway", sans-serif; }
+
+@media (max-width: 767px) {
+  .col-12 {
+    padding: 0; }
+
+  p,
+  h2 {
+    padding: 0 2%; } }
 
 /*# sourceMappingURL=style.css.map */
